@@ -7,7 +7,7 @@ import { GrList } from 'react-icons/gr'
 import { HiArrowSmDown } from 'react-icons/hi'
 import Card from "./Card"
 
-export default function SearchItems({ data }) {
+export default function SearchItems({ data, dataSize, icon }) {
     const [sortedData, setSortedData] = useState(data);
     const [isSortedByQuantity, setIsSortedByQuantity] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
@@ -47,7 +47,7 @@ export default function SearchItems({ data }) {
             </div>
             <div className={styles.itemsCountContainer}>
                 <div className={styles.itemsCount}>
-                    <p>Mostrando 9 articulos</p>
+                    <p>Mostrando {dataSize} articulos</p>
                 </div>
                 <div className={styles.sortContainer}>
                     <div className={isSortedByQuantity ? styles.sort2 : styles.sort} onClick={sortByQuantity}>
@@ -66,6 +66,7 @@ export default function SearchItems({ data }) {
                         nombre={item.nombre}
                         cantidad={item.cantidad}
                         descripcion={item.descripcion}
+                        icon={icon}
                     />
                 ))}
             </div>

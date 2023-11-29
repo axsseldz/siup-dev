@@ -1,10 +1,12 @@
 import styles from "../styles/itemsDeploy.module.css"
 import { MdOutlineSort, MdNotificationsActive } from "react-icons/md";
-import { FaUserAstronaut } from "react-icons/fa";
+import { FaUserAstronaut, FaBalanceScale, FaRadiationAlt } from "react-icons/fa";
+import { SlChemistry } from 'react-icons/sl';
 import SearchItems from "./SearchItems";
 import { APARATOS } from "../data/Aparatos";
 import { CRISTALERIA } from "../data/Cristaleria";
 import { REACTIVOS } from "../data/Reactivos"
+
 
 export default function ItemsDeploy({ type }) {
 
@@ -14,7 +16,16 @@ export default function ItemsDeploy({ type }) {
         reactivos: REACTIVOS
     };
 
+    const iconMap = {
+        aparatos: <FaBalanceScale size={20} className={styles.icon2} />,
+        cristaleria: <SlChemistry size={20} className={styles.icon2} />,
+        reactivos: <FaRadiationAlt size={20} className={styles.icon2} />,
+    };
+
     const data = dataMap[type.toLowerCase()] || null;
+    const dataSize = Object.keys(data).length;
+    const selectedIcon = iconMap[type.toLowerCase()] || null;
+
 
 
     return (
@@ -30,7 +41,7 @@ export default function ItemsDeploy({ type }) {
                     <p>Luis Suaste</p>
                 </div>
             </div>
-            <SearchItems data={data} />
+            <SearchItems data={data} dataSize={dataSize} icon={selectedIcon} />
         </div>
     )
 }

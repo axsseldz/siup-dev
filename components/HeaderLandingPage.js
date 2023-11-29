@@ -1,5 +1,6 @@
 import styles from '../styles/headerLandingPage.module.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Header() {
     return (
@@ -14,8 +15,12 @@ export default function Header() {
                 <p>Sistema de Préstamos de Laboratorio </p>
             </div>
             <nav className={styles.navBar}>
-                <p>Sign Up</p>
-                <p>Log In</p>
+                <Link href={"/signup"}>
+                    <p>Sign Up</p>
+                </Link>
+                <Link href={"/login"}>
+                    <p>Log In</p>
+                </Link>
             </nav>
         </header>
     )
