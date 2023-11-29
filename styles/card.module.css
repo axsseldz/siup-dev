@@ -1,0 +1,29 @@
+.cardContainer {
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.cardContainer p {
+    font-size: 15px;
+}
+
+.itemName {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.icon {
+    color: #ffbb02;
+}
