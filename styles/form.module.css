@@ -1,0 +1,60 @@
+.testing {
+    color: white;
+}
+
+.formContainer {
+    height: 350px;
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputStyle {
+    height: 55px;
+    width: 90%;
+    border-radius: 12px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 18px #003a1d;
+}
+
+.formContainer div {
+    width: 90%;
+    display: flex;
+    padding: 0 5px;
+    color: white;
+    font-size: 12px;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.linkToLogin {
+    color: #fac02f;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.formContainer button {
+    background-color: #fac02f;
+    height: 50px;
+    width: 150px;
+    border-radius: 12px;
+    margin: 15px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 4px #fac02f;
+}
+
+.formContainer button:active {
+    transform: scale(1.1);
+}

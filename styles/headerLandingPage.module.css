@@ -1,0 +1,38 @@
+.headerContainer {
+    background-color: #016f3d;
+    height: 100px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tittleContainer {
+    background-color: #003a1d;
+    width: 650px;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tittleContainer p {
+    color: white;
+    font-size: 25px;
+}
+
+
+.navBar {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navBar p {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
