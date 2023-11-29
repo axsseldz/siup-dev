@@ -10,6 +10,7 @@ import Card from "./Card"
 export default function SearchItems({ data }) {
     const [sortedData, setSortedData] = useState(data);
     const [isSortedByQuantity, setIsSortedByQuantity] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('');
 
 
     const sortByQuantity = () => {
@@ -22,6 +23,14 @@ export default function SearchItems({ data }) {
         setIsSortedByQuantity(!isSortedByQuantity);
     };
 
+    const handleSearchChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
+    const filteredData = sortedData.filter(item =>
+        item.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
 
     return (
         <div className={styles.container}>
@@ -30,6 +39,8 @@ export default function SearchItems({ data }) {
                     <input
                         placeholder='Busca un articulo'
                         className={styles.inputField}
+                        onChange={handleSearchChange}
+                        value={searchTerm}
                     />
                     <button>Buscar</button>
                 </div>
@@ -48,7 +59,7 @@ export default function SearchItems({ data }) {
                 </div>
             </div>
             <div className={styles.cards}>
-                {sortedData.map((item) => (
+                {filteredData.map((item) => (
                     <Card
                         key={item.id}
                         id={item.id}
