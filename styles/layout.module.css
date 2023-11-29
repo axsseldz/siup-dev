@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+}
+
+.iconContainer {
+    width: 85vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(174, 174, 174);
+}
+
+.tittle {
+    margin: 15px;
+}
