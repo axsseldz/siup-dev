@@ -77,7 +77,27 @@
     transition: transform 0.3s ease;
 }
 
+
 .sort:hover {
+    transform: scale(1.1);
+}
+
+.sort2 {
+    border-radius: 10px;
+    width: 110px;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #016f3d86;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+.sort2:hover {
     transform: scale(1.1);
 }
 

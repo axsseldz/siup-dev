@@ -26,11 +26,15 @@ export default function SideBar() {
 
                 <div className={styles.iconsAndTittle}>
                     <SlChemistry size={20} />
-                    <p>Cristaleria</p>
+                    <Link href={"/dashboard/cristaleria"}>
+                        <p>Cristaleria</p>
+                    </Link>
                 </div>
                 <div className={styles.iconsAndTittle}>
                     <FaRadiationAlt size={20} />
-                    <p>Reactivos</p>
+                    <Link href={"/dashboard/reactivos"}>
+                        <p>Reactivos</p>
+                    </Link>
                 </div>
             </div>
         </div>
