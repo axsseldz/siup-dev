@@ -3,8 +3,8 @@
 import styles from "../styles/searchItems.module.css"
 import React, { useState } from 'react'
 import { FaBorderAll } from 'react-icons/fa'
-import { GrList } from 'react-icons/Gr'
-import { HiArrowSmDown } from 'react-icons/Hi'
+import { GrList } from 'react-icons/gr'
+import { HiArrowSmDown } from 'react-icons/hi'
 import Card from "./Card"
 
 export default function SearchItems({ data }) {
